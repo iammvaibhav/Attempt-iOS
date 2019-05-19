@@ -83,7 +83,7 @@ struct SearchResultClass: Codable {
 
 class MasterViewController: UIViewController, UISearchResultsUpdating, SearchWord {
     
-    private var searchController: UISearchController!
+    var searchController: UISearchController!
     private var searchResultsController: SearchResultsTableViewController!
     var task: URLSessionDataTask?
 

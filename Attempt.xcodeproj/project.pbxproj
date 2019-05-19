@@ -17,9 +17,12 @@
 		801712C72247D5E900620E23 /* VocabularyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 801712C62247D5E900620E23 /* VocabularyViewController.swift */; };
 		802038CF2247EC8D00B095FA /* SearchResultsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 802038CE2247EC8D00B095FA /* SearchResultsTableViewController.swift */; };
 		802038D122482FD500B095FA /* SearchWord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 802038D022482FD500B095FA /* SearchWord.swift */; };
+		80EC77EE228F193E00001C9C /* CustomSearchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80EC77ED228F193E00001C9C /* CustomSearchCell.swift */; };
+		BEE2900A5F9476069627A447 /* Pods_Attempt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38E156A27C953C0F6887D857 /* Pods_Attempt.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		38E156A27C953C0F6887D857 /* Pods_Attempt.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Attempt.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		801712AD224653E100620E23 /* Attempt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Attempt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		801712B0224653E100620E23 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		801712B2224653E100620E23 /* GoogleDictionaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleDictionaryViewController.swift; sourceTree = "<group>"; };
@@ -32,6 +35,9 @@
 		801712C62247D5E900620E23 /* VocabularyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VocabularyViewController.swift; sourceTree = "<group>"; };
 		802038CE2247EC8D00B095FA /* SearchResultsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultsTableViewController.swift; sourceTree = "<group>"; };
 		802038D022482FD500B095FA /* SearchWord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchWord.swift; sourceTree = "<group>"; };
+		80EC77ED228F193E00001C9C /* CustomSearchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSearchCell.swift; sourceTree = "<group>"; };
+		C15F9931B820B67BBC1A5C53 /* Pods-Attempt.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Attempt.release.xcconfig"; path = "Target Support Files/Pods-Attempt/Pods-Attempt.release.xcconfig"; sourceTree = "<group>"; };
+		D80CFCEEFE145779011A1229 /* Pods-Attempt.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Attempt.debug.xcconfig"; path = "Target Support Files/Pods-Attempt/Pods-Attempt.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,17 +45,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BEE2900A5F9476069627A447 /* Pods_Attempt.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1FF0E9B19D26A4DC9900C034 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				38E156A27C953C0F6887D857 /* Pods_Attempt.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		801712A4224653E100620E23 = {
 			isa = PBXGroup;
 			children = (
 				801712AF224653E100620E23 /* Attempt */,
 				801712AE224653E100620E23 /* Products */,
+				8D3D552CD6374BC3160107F0 /* Pods */,
+				1FF0E9B19D26A4DC9900C034 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -75,8 +92,18 @@
 				801712B7224653E300620E23 /* Assets.xcassets */,
 				801712B9224653E300620E23 /* LaunchScreen.storyboard */,
 				801712BC224653E300620E23 /* Info.plist */,
+				80EC77ED228F193E00001C9C /* CustomSearchCell.swift */,
 			);
 			path = Attempt;
+			sourceTree = "<group>";
+		};
+		8D3D552CD6374BC3160107F0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D80CFCEEFE145779011A1229 /* Pods-Attempt.debug.xcconfig */,
+				C15F9931B820B67BBC1A5C53 /* Pods-Attempt.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -86,9 +113,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 801712BF224653E300620E23 /* Build configuration list for PBXNativeTarget "Attempt" */;
 			buildPhases = (
+				44310A4D6E12F8AFF8F0D77F /* [CP] Check Pods Manifest.lock */,
 				801712A9224653E100620E23 /* Sources */,
 				801712AA224653E100620E23 /* Frameworks */,
 				801712AB224653E100620E23 /* Resources */,
+				3D7CCA83254EB9145BDC93A6 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -145,6 +174,53 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		3D7CCA83254EB9145BDC93A6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Attempt/Pods-Attempt-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/WCLShineButton/WCLShineButton.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/WCLShineButton.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Attempt/Pods-Attempt-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		44310A4D6E12F8AFF8F0D77F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Attempt-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		801712A9224653E100620E23 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -152,6 +228,7 @@
 			files = (
 				801712C52247D29F00620E23 /* MasterViewController.swift in Sources */,
 				801712B3224653E100620E23 /* GoogleDictionaryViewController.swift in Sources */,
+				80EC77EE228F193E00001C9C /* CustomSearchCell.swift in Sources */,
 				802038CF2247EC8D00B095FA /* SearchResultsTableViewController.swift in Sources */,
 				801712C32247D1BD00620E23 /* RootSplitViewController.swift in Sources */,
 				801712C72247D5E900620E23 /* VocabularyViewController.swift in Sources */,
@@ -300,6 +377,7 @@
 		};
 		801712C0224653E300620E23 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D80CFCEEFE145779011A1229 /* Pods-Attempt.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -318,6 +396,7 @@
 		};
 		801712C1224653E300620E23 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C15F9931B820B67BBC1A5C53 /* Pods-Attempt.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

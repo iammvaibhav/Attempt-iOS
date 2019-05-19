@@ -9,8 +9,18 @@
 import UIKit
 import WebKit
 
-class VocabularyViewController: UIViewController, WKNavigationDelegate {
+class VocabularyViewController: UIViewController, WKNavigationDelegate, WKScriptMessageHandler {
 
+    
+    func userContentController(_ userContentController: WKUserContentController, didReceive message: WKScriptMessage) {
+        if message.name == "test", let messageBody = message.body as? String {
+            //print(messageBody) got the word. Now set it as the searched word
+            self.searchTerm = messageBody
+            (self.tabBarController?.viewControllers?[0] as! GoogleDictionaryViewController).searchTerm = messageBody
+            ((self.tabBarController?.splitViewController?.viewControllers[0] as! UINavigationController).viewControllers[0] as! MasterViewController).searchController.searchBar.text = messageBody
+        }
+    }
+    
     @IBOutlet weak var webView: WKWebView!
     var hasFinishedLoading = false
     var searchTerm = "" {
@@ -27,6 +37,8 @@ class VocabularyViewController: UIViewController, WKNavigationDelegate {
         let myRequest = URLRequest(url: myUrl!)
         webView.load(myRequest)
         webView.navigationDelegate = self
+        let x = webView.configuration.userContentController
+        x.add(self, name: "test")
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -54,6 +66,8 @@ class VocabularyViewController: UIViewController, WKNavigationDelegate {
                     if (document.getElementsByClassName("fixed-tray")[0]) document.getElementsByClassName("fixed-tray")[0].style.display = "none";
                     if (document.getElementById("dictionaryNav")) document.getElementById("dictionaryNav").style.display = "none";
                     if (document.getElementsByClassName("signup-tout center clearfloat sectionbg")[0]) document.getElementsByClassName("signup-tout center clearfloat sectionbg")[0].style.display = 'none';
+                    if (document.getElementsByClassName("learn")[0])
+                        document.getElementsByClassName("learn")[0].style.display = 'none';
                     if (document.getElementsByClassName("page-footer")[0]) document.getElementsByClassName("page-footer")[0].style.display = 'none';
                     var input = document.querySelector('#search')
                     const enterKey = new KeyboardEvent("keydown", {
@@ -86,7 +100,26 @@ class VocabularyViewController: UIViewController, WKNavigationDelegate {
         if (document.getElementsByClassName("section related nocontent robots-nocontent screen-only")[0]) document.getElementsByClassName("section related nocontent robots-nocontent screen-only")[0].style.display = 'none';
         if (document.getElementsByClassName("wordPage vocab blurbed clearfloat content-wrapper")[0]) document.getElementsByClassName("wordPage vocab blurbed clearfloat content-wrapper")[0].style.paddingTop = '0px';
         if (document.getElementsByClassName("definitionsContainer")[0]) document.getElementsByClassName("definitionsContainer")[0].firstElementChild.style.width = '100%';
+        if (document.getElementsByClassName("learn")[0])
+            document.getElementsByClassName("learn")[0].style.display = 'none';
         console.log("js finished searching word \(word)")
+        
+        function clicked(i) {
+        window.webkit.messageHandlers.test.postMessage(String(i.innerText));
+        }
+        
+        function monitorLinks() {
+        var elements = Array.from(document.getElementsByTagName("a")).filter(element => element.className == 'word');
+        for(var i=0; i<elements.length; i++){
+        elements[i].onclick = (function(opt) {
+        return function() {
+        clicked(opt);
+        };
+        })(elements[i]);
+        }
+        }
+        
+        monitorLinks()
         })
         """
         

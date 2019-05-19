@@ -9,7 +9,17 @@
 import UIKit
 import WebKit
 
-class GoogleDictionaryViewController: UIViewController, WKNavigationDelegate {
+class GoogleDictionaryViewController: UIViewController, WKNavigationDelegate, WKScriptMessageHandler {
+    
+    func userContentController(_ userContentController: WKUserContentController, didReceive message: WKScriptMessage) {
+        if message.name == "test", let messageBody = message.body as? String {
+            //print(messageBody) got the word. Now set it as the searched word
+            self.searchTerm = messageBody
+            (self.tabBarController?.viewControllers?[1] as! VocabularyViewController).searchTerm = messageBody
+            ((self.tabBarController?.splitViewController?.viewControllers[0] as! UINavigationController).viewControllers[0] as! MasterViewController).searchController.searchBar.text = messageBody
+        }
+    }
+    
 
     @IBOutlet weak var webView: WKWebView!
     var hasFinishedLoading = false
@@ -22,6 +32,8 @@ class GoogleDictionaryViewController: UIViewController, WKNavigationDelegate {
         let myRequest = URLRequest(url: myUrl!)
         webView.load(myRequest)
         webView.navigationDelegate = self
+        let x = webView.configuration.userContentController
+        x.add(self, name: "test")
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -63,6 +75,34 @@ print(input != null)
 const enterKey = new KeyboardEvent("keydown", {
                     bubbles: true, cancelable: true, keyCode: 13
                 });
+
+function clicked(i) {
+    window.webkit.messageHandlers.test.postMessage(i.getAttribute("data-term-for-update"));
+}
+
+function monitorLinks() {
+var elements = Array.from(document.getElementsByTagName("span")).filter(element => element.className == 'SDZsVb');
+for(var i=0; i<elements.length; i++){
+    elements[i].onclick = (function(opt) {
+    return function() {
+       clicked(opt);
+    };
+})(elements[i]);
+}
+}
+
+let oldXHROpen = window.XMLHttpRequest.prototype.open;
+window.XMLHttpRequest.prototype.open = function(method, url, async, user, password) {
+ // do something with the method, url and etc.
+ this.addEventListener('load', function() {
+  // do something with the response text
+  //console.log('load: ' + this.responseText);
+setTimeout(monitorLinks, 200)
+ });
+               
+ return oldXHROpen.apply(this, arguments);
+}
+
 """
 
         webView.evaluateJavaScript(js) { (_, _) in
