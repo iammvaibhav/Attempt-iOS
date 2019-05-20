@@ -11,7 +11,7 @@ Attempt is a project useful for keeping up with new words As-Fast-As-Possible.
 
 ## TODO
 * Making it more robust and stable.
-* Favourite/History of words.
+* ~~Favourite/History of words.~~
 * New UI/UX. 
 * Currently being tested on iPad only. iPhone supported to be added.
 * Much more...
