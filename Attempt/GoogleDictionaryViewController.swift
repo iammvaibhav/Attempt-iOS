@@ -68,6 +68,7 @@ document.getElementById("center_col").style.paddingTop = '16px';
 //w.click()
 
 var w = document.getElementsByClassName('YaTjLb')[0] //always available combo box
+w.style.display = "none";
 w.click()
 
 var input = document.querySelector('#sb_ifc50 > input')
@@ -97,6 +98,11 @@ window.XMLHttpRequest.prototype.open = function(method, url, async, user, passwo
  this.addEventListener('load', function() {
   // do something with the response text
   //console.log('load: ' + this.responseText);
+document.getElementsByClassName("duf3")[0].style.display = "none";
+document.getElementsByClassName("iXqz2e aI3msd xpdarr mv83Pc pSO8Ic vk_arc")[0].style.display = "none";
+//document.getElementsByClassName("zbA8Me gJBeNe vSuuAd")[0].style.display = "none";
+document.getElementsByClassName('YaTjLb')[0].style.display = "none";
+document.getElementsByClassName("lr_dct_ent vmod XpoqFe")[0].style.paddingTop = '0px';
 setTimeout(monitorLinks, 200)
  });
                
