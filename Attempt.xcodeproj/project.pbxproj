@@ -17,7 +17,6 @@
 		801712C72247D5E900620E23 /* VocabularyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 801712C62247D5E900620E23 /* VocabularyViewController.swift */; };
 		802038CF2247EC8D00B095FA /* SearchResultsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 802038CE2247EC8D00B095FA /* SearchResultsTableViewController.swift */; };
 		802038D122482FD500B095FA /* SearchWord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 802038D022482FD500B095FA /* SearchWord.swift */; };
-		80EC77EE228F193E00001C9C /* CustomSearchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80EC77ED228F193E00001C9C /* CustomSearchCell.swift */; };
 		BEE2900A5F9476069627A447 /* Pods_Attempt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38E156A27C953C0F6887D857 /* Pods_Attempt.framework */; };
 /* End PBXBuildFile section */
 
@@ -35,7 +34,6 @@
 		801712C62247D5E900620E23 /* VocabularyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VocabularyViewController.swift; sourceTree = "<group>"; };
 		802038CE2247EC8D00B095FA /* SearchResultsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultsTableViewController.swift; sourceTree = "<group>"; };
 		802038D022482FD500B095FA /* SearchWord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchWord.swift; sourceTree = "<group>"; };
-		80EC77ED228F193E00001C9C /* CustomSearchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSearchCell.swift; sourceTree = "<group>"; };
 		C15F9931B820B67BBC1A5C53 /* Pods-Attempt.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Attempt.release.xcconfig"; path = "Target Support Files/Pods-Attempt/Pods-Attempt.release.xcconfig"; sourceTree = "<group>"; };
 		D80CFCEEFE145779011A1229 /* Pods-Attempt.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Attempt.debug.xcconfig"; path = "Target Support Files/Pods-Attempt/Pods-Attempt.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -92,7 +90,6 @@
 				801712B7224653E300620E23 /* Assets.xcassets */,
 				801712B9224653E300620E23 /* LaunchScreen.storyboard */,
 				801712BC224653E300620E23 /* Info.plist */,
-				80EC77ED228F193E00001C9C /* CustomSearchCell.swift */,
 			);
 			path = Attempt;
 			sourceTree = "<group>";
@@ -228,7 +225,6 @@
 			files = (
 				801712C52247D29F00620E23 /* MasterViewController.swift in Sources */,
 				801712B3224653E100620E23 /* GoogleDictionaryViewController.swift in Sources */,
-				80EC77EE228F193E00001C9C /* CustomSearchCell.swift in Sources */,
 				802038CF2247EC8D00B095FA /* SearchResultsTableViewController.swift in Sources */,
 				801712C32247D1BD00620E23 /* RootSplitViewController.swift in Sources */,
 				801712C72247D5E900620E23 /* VocabularyViewController.swift in Sources */,

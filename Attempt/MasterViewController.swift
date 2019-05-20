@@ -78,17 +78,64 @@ struct SearchResultClass: Codable {
     let q: String
 }
 
-
-
-
-class MasterViewController: UIViewController, UISearchResultsUpdating, SearchWord {
+class MasterViewController: UIViewController, UISearchResultsUpdating, SearchWord, UITableViewDataSource, UITableViewDelegate {
+    
+    var wordsList = [String]()
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return wordsList.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "wordCell", for: indexPath)
+        cell.textLabel?.text = wordsList[indexPath.row]
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        searchWord(searchWord: wordsList[indexPath.row])
+    }
+    
+    func addFavourite() {
+        wordsList.append(searchWordString)
+        //persist list
+        UserDefaults.standard.set(wordsList, forKey: "wordsList")
+        print(wordsList)
+        print(UserDefaults.standard.object(forKey: "wordsList") as! [String])
+        tableView.reloadData()
+    }
+    
+    func isFavourite() -> Bool {
+        return wordsList.contains(searchWordString)
+    }
+    
+    func removeFavourite() {
+        wordsList.removeAll(where: { $0 == searchWordString })
+        print(wordsList)
+        UserDefaults.standard.set(wordsList, forKey: "wordsList")
+        print(UserDefaults.standard.object(forKey: "wordsList") as! [String])
+        tableView.reloadData()
+    }
     
     var searchController: UISearchController!
     private var searchResultsController: SearchResultsTableViewController!
     var task: URLSessionDataTask?
-
+    @IBOutlet weak var tableView: UITableView!
+    var searchWordString = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if let words = UserDefaults.standard.object(forKey: "wordsList") as? [String] {
+            print("I am here")
+            print(words)
+            wordsList.append(contentsOf: words)
+        }
         
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         searchResultsController = storyboard.instantiateViewController(withIdentifier: "searchResultsTableViewController") as? SearchResultsTableViewController
@@ -113,6 +160,9 @@ class MasterViewController: UIViewController, UISearchResultsUpdating, SearchWor
         (self.splitViewController?.viewControllers[1] as! UITabBarController).viewControllers?.forEach {
             let _ = $0.view
         }
+        
+        tableView.dataSource = self
+        tableView.delegate = self
     }
     
 
@@ -181,6 +231,12 @@ class MasterViewController: UIViewController, UISearchResultsUpdating, SearchWor
     }
     
     func searchWord(searchWord: String) {
+        searchWordString = searchWord
+        if (isFavourite()) {
+            (splitViewController as? RootSplitViewController)?.bt1.setClicked(true, animated: false)
+        } else {
+            (splitViewController as? RootSplitViewController)?.bt1.setClicked(false, animated: false)
+        }
         ((self.splitViewController?.viewControllers[1] as! UITabBarController).viewControllers![0] as! GoogleDictionaryViewController).searchTerm = searchWord
         ((self.splitViewController?.viewControllers[1] as! UITabBarController).viewControllers![1] as! VocabularyViewController).searchTerm = searchWord
         ((self.splitViewController?.viewControllers[1] as! UITabBarController).viewControllers![0] as! GoogleDictionaryViewController).searchWord(word: searchWord)
