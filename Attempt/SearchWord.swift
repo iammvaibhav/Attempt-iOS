@@ -7,5 +7,6 @@
 //
 
 public protocol SearchWord {
-    func searchWord(searchWord: String)
+    func searchWord(searchWord: String, pushInStack: Bool, onlyItem: Bool)
+    func showSuggestionsAndDefinitions()
 }

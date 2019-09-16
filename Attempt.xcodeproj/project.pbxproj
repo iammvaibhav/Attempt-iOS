@@ -8,15 +8,23 @@
 
 /* Begin PBXBuildFile section */
 		801712B1224653E100620E23 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 801712B0224653E100620E23 /* AppDelegate.swift */; };
-		801712B3224653E100620E23 /* GoogleDictionaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 801712B2224653E100620E23 /* GoogleDictionaryViewController.swift */; };
 		801712B6224653E100620E23 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 801712B4224653E100620E23 /* Main.storyboard */; };
 		801712B8224653E300620E23 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 801712B7224653E300620E23 /* Assets.xcassets */; };
 		801712BB224653E300620E23 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 801712B9224653E300620E23 /* LaunchScreen.storyboard */; };
-		801712C32247D1BD00620E23 /* RootSplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 801712C22247D1BD00620E23 /* RootSplitViewController.swift */; };
-		801712C52247D29F00620E23 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 801712C42247D29F00620E23 /* MasterViewController.swift */; };
-		801712C72247D5E900620E23 /* VocabularyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 801712C62247D5E900620E23 /* VocabularyViewController.swift */; };
-		802038CF2247EC8D00B095FA /* SearchResultsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 802038CE2247EC8D00B095FA /* SearchResultsTableViewController.swift */; };
+		801F80AA230A7A8900C6F4E4 /* Attempt.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 801F80A8230A7A8900C6F4E4 /* Attempt.xcdatamodeld */; };
+		801F80AC230A7AA700C6F4E4 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 801F80AB230A7AA700C6F4E4 /* CoreDataStack.swift */; };
 		802038D122482FD500B095FA /* SearchWord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 802038D022482FD500B095FA /* SearchWord.swift */; };
+		803C9CE1230A80D4009985EB /* Word+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 803C9CDF230A80D4009985EB /* Word+CoreDataClass.swift */; };
+		803C9CE2230A80D4009985EB /* Word+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 803C9CE0230A80D4009985EB /* Word+CoreDataProperties.swift */; };
+		803C9CE4230A8886009985EB /* CoreDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 803C9CE3230A8886009985EB /* CoreDataHelper.swift */; };
+		803C9CE6230AE3E7009985EB /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 803C9CE5230AE3E7009985EB /* GradientView.swift */; };
+		803C9CE8230CCB08009985EB /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 803C9CE7230CCB08009985EB /* HomeViewController.swift */; };
+		8077477222A2CF2000729D93 /* MainScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8077477122A2CF2000729D93 /* MainScreenViewController.swift */; };
+		807CF42D230714A30007A6B9 /* WordSuggestionDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 807CF42C230714A30007A6B9 /* WordSuggestionDataSource.swift */; };
+		807CF437230896B10007A6B9 /* DefinitionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 807CF436230896B10007A6B9 /* DefinitionViewController.swift */; };
+		808A669922A4FEAC00D3F388 /* WordSuggestionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 808A669822A4FEAC00D3F388 /* WordSuggestionView.swift */; };
+		8093F8692300271700A0CE97 /* StringHTMLExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8093F8682300271700A0CE97 /* StringHTMLExtension.swift */; };
+		809E87E0230EF0DB00629C48 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 809E87DF230EF0DB00629C48 /* GoogleService-Info.plist */; };
 		BEE2900A5F9476069627A447 /* Pods_Attempt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38E156A27C953C0F6887D857 /* Pods_Attempt.framework */; };
 /* End PBXBuildFile section */
 
@@ -24,16 +32,24 @@
 		38E156A27C953C0F6887D857 /* Pods_Attempt.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Attempt.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		801712AD224653E100620E23 /* Attempt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Attempt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		801712B0224653E100620E23 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		801712B2224653E100620E23 /* GoogleDictionaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleDictionaryViewController.swift; sourceTree = "<group>"; };
 		801712B5224653E100620E23 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		801712B7224653E300620E23 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		801712BA224653E300620E23 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		801712BC224653E300620E23 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		801712C22247D1BD00620E23 /* RootSplitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootSplitViewController.swift; sourceTree = "<group>"; };
-		801712C42247D29F00620E23 /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
-		801712C62247D5E900620E23 /* VocabularyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VocabularyViewController.swift; sourceTree = "<group>"; };
-		802038CE2247EC8D00B095FA /* SearchResultsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultsTableViewController.swift; sourceTree = "<group>"; };
+		801F80A9230A7A8900C6F4E4 /* Attempt.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Attempt.xcdatamodel; sourceTree = "<group>"; };
+		801F80AB230A7AA700C6F4E4 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		802038D022482FD500B095FA /* SearchWord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchWord.swift; sourceTree = "<group>"; };
+		803C9CDF230A80D4009985EB /* Word+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Word+CoreDataClass.swift"; sourceTree = "<group>"; };
+		803C9CE0230A80D4009985EB /* Word+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Word+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		803C9CE3230A8886009985EB /* CoreDataHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataHelper.swift; sourceTree = "<group>"; };
+		803C9CE5230AE3E7009985EB /* GradientView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
+		803C9CE7230CCB08009985EB /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		8077477122A2CF2000729D93 /* MainScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenViewController.swift; sourceTree = "<group>"; };
+		807CF42C230714A30007A6B9 /* WordSuggestionDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordSuggestionDataSource.swift; sourceTree = "<group>"; };
+		807CF436230896B10007A6B9 /* DefinitionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefinitionViewController.swift; sourceTree = "<group>"; };
+		808A669822A4FEAC00D3F388 /* WordSuggestionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordSuggestionView.swift; sourceTree = "<group>"; };
+		8093F8682300271700A0CE97 /* StringHTMLExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringHTMLExtension.swift; sourceTree = "<group>"; };
+		809E87DF230EF0DB00629C48 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		C15F9931B820B67BBC1A5C53 /* Pods-Attempt.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Attempt.release.xcconfig"; path = "Target Support Files/Pods-Attempt/Pods-Attempt.release.xcconfig"; sourceTree = "<group>"; };
 		D80CFCEEFE145779011A1229 /* Pods-Attempt.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Attempt.debug.xcconfig"; path = "Target Support Files/Pods-Attempt/Pods-Attempt.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -79,17 +95,25 @@
 		801712AF224653E100620E23 /* Attempt */ = {
 			isa = PBXGroup;
 			children = (
+				803C9CE5230AE3E7009985EB /* GradientView.swift */,
+				803C9CDF230A80D4009985EB /* Word+CoreDataClass.swift */,
+				803C9CE0230A80D4009985EB /* Word+CoreDataProperties.swift */,
+				801F80A8230A7A8900C6F4E4 /* Attempt.xcdatamodeld */,
 				802038D022482FD500B095FA /* SearchWord.swift */,
-				802038CE2247EC8D00B095FA /* SearchResultsTableViewController.swift */,
-				801712C42247D29F00620E23 /* MasterViewController.swift */,
-				801712C62247D5E900620E23 /* VocabularyViewController.swift */,
-				801712B2224653E100620E23 /* GoogleDictionaryViewController.swift */,
-				801712C22247D1BD00620E23 /* RootSplitViewController.swift */,
 				801712B0224653E100620E23 /* AppDelegate.swift */,
 				801712B4224653E100620E23 /* Main.storyboard */,
 				801712B7224653E300620E23 /* Assets.xcassets */,
 				801712B9224653E300620E23 /* LaunchScreen.storyboard */,
 				801712BC224653E300620E23 /* Info.plist */,
+				8077477122A2CF2000729D93 /* MainScreenViewController.swift */,
+				808A669822A4FEAC00D3F388 /* WordSuggestionView.swift */,
+				8093F8682300271700A0CE97 /* StringHTMLExtension.swift */,
+				807CF42C230714A30007A6B9 /* WordSuggestionDataSource.swift */,
+				807CF436230896B10007A6B9 /* DefinitionViewController.swift */,
+				801F80AB230A7AA700C6F4E4 /* CoreDataStack.swift */,
+				803C9CE3230A8886009985EB /* CoreDataHelper.swift */,
+				803C9CE7230CCB08009985EB /* HomeViewController.swift */,
+				809E87DF230EF0DB00629C48 /* GoogleService-Info.plist */,
 			);
 			path = Attempt;
 			sourceTree = "<group>";
@@ -164,6 +188,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				801712BB224653E300620E23 /* LaunchScreen.storyboard in Resources */,
+				809E87E0230EF0DB00629C48 /* GoogleService-Info.plist in Resources */,
 				801712B8224653E300620E23 /* Assets.xcassets in Resources */,
 				801712B6224653E100620E23 /* Main.storyboard in Resources */,
 			);
@@ -178,16 +203,11 @@
 			files = (
 			);
 			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Attempt/Pods-Attempt-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/WCLShineButton/WCLShineButton.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-Attempt/Pods-Attempt-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/WCLShineButton.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-Attempt/Pods-Attempt-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -223,12 +243,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				801712C52247D29F00620E23 /* MasterViewController.swift in Sources */,
-				801712B3224653E100620E23 /* GoogleDictionaryViewController.swift in Sources */,
-				802038CF2247EC8D00B095FA /* SearchResultsTableViewController.swift in Sources */,
-				801712C32247D1BD00620E23 /* RootSplitViewController.swift in Sources */,
-				801712C72247D5E900620E23 /* VocabularyViewController.swift in Sources */,
+				801F80AC230A7AA700C6F4E4 /* CoreDataStack.swift in Sources */,
+				808A669922A4FEAC00D3F388 /* WordSuggestionView.swift in Sources */,
+				803C9CE2230A80D4009985EB /* Word+CoreDataProperties.swift in Sources */,
+				803C9CE1230A80D4009985EB /* Word+CoreDataClass.swift in Sources */,
+				807CF437230896B10007A6B9 /* DefinitionViewController.swift in Sources */,
+				803C9CE8230CCB08009985EB /* HomeViewController.swift in Sources */,
+				803C9CE4230A8886009985EB /* CoreDataHelper.swift in Sources */,
+				807CF42D230714A30007A6B9 /* WordSuggestionDataSource.swift in Sources */,
+				8093F8692300271700A0CE97 /* StringHTMLExtension.swift in Sources */,
+				8077477222A2CF2000729D93 /* MainScreenViewController.swift in Sources */,
 				801712B1224653E100620E23 /* AppDelegate.swift in Sources */,
+				803C9CE6230AE3E7009985EB /* GradientView.swift in Sources */,
+				801F80AA230A7A8900C6F4E4 /* Attempt.xcdatamodeld in Sources */,
 				802038D122482FD500B095FA /* SearchWord.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -431,6 +458,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		801F80A8230A7A8900C6F4E4 /* Attempt.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				801F80A9230A7A8900C6F4E4 /* Attempt.xcdatamodel */,
+			);
+			currentVersion = 801F80A9230A7A8900C6F4E4 /* Attempt.xcdatamodel */;
+			path = Attempt.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 801712A5224653E100620E23 /* Project object */;
 }
