@@ -1,4 +1,4 @@
-**This README (like project) is currently in bare initial stage and incomplete. It is in active development and being updated regularly.**
+**Deprecated in favour of https://github.com/iammvaibhav/Attempt**
 # Attempt
 Attempt is a project useful for keeping up with new words As-Fast-As-Possible.
 
